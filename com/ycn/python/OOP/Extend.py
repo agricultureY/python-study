@@ -141,12 +141,12 @@ class Student(object):
 
 
 print(Student.name)
-stu1 = Student('张三')
-stu1.score = 90
-print(stu1.name, '---->', stu1.score)
+stu = Student('张三')
+stu.score = 90
+print(stu.name, '---->', stu.score)
 # 删除实例对象属性
-del stu1.name
-print(stu1.name)
+del stu.name
+print(stu.name)
 # 在编写程序的时候，千万不要对实例属性和类属性使用相同的名字，因为相同名称的实例属性将屏蔽掉类属性，
 # 但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。
 
