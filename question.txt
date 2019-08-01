@@ -1,0 +1,9 @@
+imp 从 Python 3.4 之后弃用了，建议使用 importlib 代替
+解决
+打开 docrunner.py 文件，做如下两步修改：
+在第一行，注释掉 imp，导入 importlib
+#import imp
+import importlib
+在第 230 行的 loadSource 函数中，注释 imp.load_source，使用 importlib.machinery.SourceFileLoader 加载模块
+#module = imp.load_source(moduleName, fileName)
+module = importlib.machinery.SourceFileLoader(moduleName, fileName).load_module()
